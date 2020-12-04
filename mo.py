@@ -3,9 +3,7 @@ import socket
 import sys
 import time
 from colorama import Fore
-
-while True:
-    def __name__():
+def __name__():
         try:
             print(Fore.GREEN + "\n\nHello . Welcome Back ;)\n")
             time.sleep(3)
