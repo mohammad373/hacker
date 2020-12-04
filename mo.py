@@ -21,23 +21,5 @@ while True:
             print(Fore.GREEN + "Ip Web Site ==> "+ Fore.RED + my_socket)
 
         except:
-            try:
-                print(Fore.GREEN + "Pleass Enter For Go To The Mano :)")
-                i = input("")
-                if i == "":
-                    try:
-                        print(Fore.RED + "You Are 5 Sec Go To The Mano ;)")
-                        time.sleep(5)
-                        sys.exit()
-                    except:
-                        pass
-                if i !="":
-                    try:
-                        print(Fore.RED + "Not Found ;)")
-                        time.sleep()
-                        sys.exit()
-                    except:
-                        pass
-            except:
                 pass
     __name__()
