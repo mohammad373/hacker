@@ -1028,7 +1028,7 @@ aweber-web-form-widget
             pass
     else:
         print(Fore.BLUE + "[!]" + Fore.GREEN + "Ok Your Target Is WordPress" + Fore.YELLOW + " ;) ")
-        time.sleet(3)
+        time.sleep(3)
         print(Fore.BLUE + "[!]" + Fore.GREEN + "There Test The Plugins ... ")
         time.sleep(3)
     for i in my_list:
