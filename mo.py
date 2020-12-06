@@ -1022,7 +1022,7 @@ aweber-web-form-widget
         pass 
     print(Fore.BLUE + "[+] " + Fore.GREEN + "Your Site Is WordPress" + Fore.BLUE + " :) ")
     time.sleep(3)                 
-    print(Fore.BLUE + "[+] " + Fore.GREEN + "Test The 1000 Plagin" + Fore.Blue + " :) ")                 
+    print(Fore.BLUE + "[+] " + Fore.GREEN + "Test The 1000 Plagin" + Fore.BLUE + " :) ")                 
     time.sleep(3)
     
     for i in pl:
