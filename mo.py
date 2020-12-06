@@ -1029,7 +1029,7 @@ aweber-web-form-widget
         try:             
             if r.status_code == 200 or r.status_code == 400: 
                 q = "http://" + target + "/wp-content/plugins/" + i            
-                print(Fore.GREEN + [+] " + Fore.GREEN +  q)
+                print(Fore.GREEN + "[+] " + Fore.GREEN +  q)
             else:
                 print(Fore.RED + "[!] " + Fore.RED + q)
         except:
