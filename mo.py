@@ -1033,7 +1033,7 @@ aweber-web-form-widget
         time.sleep(3)
     for i in my_list:
         try:
-            q = "http://" + target + "/wp-content/plugins/" + i
+            q = requests.get("http://" + target + "/wp-content/plugins/" + i)
             if q.status_code == 200 or q.status_code == 400:
                 print(Fore.BLUE + "[+] " + Fore.GREEN + q + Fore.RED + " | " + Fore.YELLOW + "Found" )
             else:
