@@ -1013,7 +1013,7 @@ aweber-web-form-widget
     print(Fore.RED + "This Is Test For WordPress" + Fore.YELLOW + " :) ")
     target = input(Fore.GREEN + "Enter Your address WebSite" + Fore.BLUE + " ==>  ")
     print(Fore.RED + "\nOk Pleass 5 Sec Latter" + ForeYELLOW + " ;) ")
-    r = requests.get("http://+ target + "/wp-content/plugins/")
+    r = requests.get("http://"+ target + "/wp-content/plugins/")
     if r.status_code == 500 or r.status_code == 404:
         print(Fore.YELOW + "[!] " + Fore.RED + "Error : Youe WebSite Is Not WordPress " + Fore.BLUE + ":( ")
         time.sleep(2)
