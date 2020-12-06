@@ -1,14 +1,13 @@
 # hacker
-import time
-import sys
+# import 
 import requests
-import json
+import sys
 import os
+import time
 from colorama import Fore
 
 def __1__():
-    os.system("clear")
-    pl = ("""wordpress-importer
+    my_list = ("""wordpress-importer
 regenerate-thumbnails
 wp-super-cache
 jetpack
@@ -1010,32 +1009,43 @@ simple-wp-sitemap
 aweber-web-form-widget
 """).split("\n")
 
-    print(Fore.RED + "This Is Test For WordPress" + Fore.YELLOW + " :) ")
-    target = input(Fore.GREEN + "Enter Your address WebSite" + Fore.BLUE + " ==>  ")
-    print(Fore.RED + "\nOk Pleass 5 Sec Latter" + Fore.YELLOW + " ;) ")
-    r = requests.get("http://"+ target + "/wp-content/plugins/")
-    if r.status_code == 500 or r.status_code == 404:
-        print(Fore.YELOW + "[!] " + Fore.RED + "Error : Youe WebSite Is Not WordPress " + Fore.BLUE + ":( ")
-        time.sleep(2)
-        sys.exit()
-    else:
-        pass 
-    print(Fore.BLUE + "[+] " + Fore.GREEN + "Your Site Is WordPress" + Fore.BLUE + " :) ")
-    time.sleep(3)                 
-    print(Fore.BLUE + "[+] " + Fore.GREEN + "Test The 1000 Plagin" + Fore.BLUE + " :) ")                 
-    time.sleep(3)
-    
-    for i in pl:
-        try:             
-            if r.status_code == 200 or r.status_code == 400: 
-                q = "http://" + target + "/wp-content/plugins/" + i            
-                print(Fore.GREEN + "[+] " + Fore.GREEN +  q)
-            else:
-                print(Fore.RED + "[!] " + Fore.RED + q)
+    target = input(Fore.RED + "Enter Your Address webSite" + Fore.YELLOW + " ==> ")
+    if target == "" or None:
+        try:
+            print(Fore.RED + "Ok Good Lounch" + Fore.YELLOW + " ;) ")
+            time.sleep(2)
+            sys.exit()
         except:
-                pass      
-                      
-__1__()                      
+            pass
+    r = requests.get("http://" + target + "/wp-content/plugins/")
+    if r.status_code == 404 or r.status_code == 500:
+        try:
+            print(Fore.BLUE + "[!]"   Fore.RED + "Your Target Is Not WordPress" + Fore.YELLOW + " ;( ")
+            time.sleep(2)
+            sys.exit()
+        except:
+            pass
+    else:
+        print(Fore.BLUE + "[!]" + Fore.GREEN + "Ok Your Target Is WordPress" + Fore.YELLOW + " ;) ")
+        time.sleet(3)
+        print(Fore.BLUE + "[!]" + Fore.GREEN + "There Test The Plugins ... ")
+        time.sleep(3)
+    for i in my_list:
+        try:
+            q = "http://" + target + "/wp-content/plugins/" + i
+            if q.status_code == 200 or q.status_code == 400:
+                print(Fore.BLUE + "[+] " + Fore.GREEN + q + Fore.RED + " | " + Fore.YELLOW + "Found" )
+            else:
+                print(Fore.BLUE + "[-] " + Fore.RED + q + Fore.GREEN + " | " + Fore.YELLOW + "Not Found")
+        except:
+            try:
+                time.sleep(2)
+                print(Fore.YELLOW + "\nGod Lounch " + Fore.BLUE + ";)")
+                time.sleep(2)
+                sys.exit()
+            except:
+                pass
+__1__()
         
 
         
