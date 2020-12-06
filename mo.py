@@ -1039,12 +1039,13 @@ aweber-web-form-widget
             else:
                 print(Fore.BLUE + "[-] " + Fore.RED + q + Fore.GREEN + " | " + Fore.YELLOW + "Not Found")
         except:
-            try:
+            pass
+    try:
                 time.sleep(2)
                 print(Fore.YELLOW + "\nGod Lounch " + Fore.BLUE + ";)")
                 time.sleep(2)
                 sys.exit()
-            except:
+    except:
                 pass
 __1__()
         
