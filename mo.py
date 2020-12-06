@@ -1020,33 +1020,24 @@ aweber-web-form-widget
             pass
     r = requests.get("http://" + target + "/wp-content/plugins/")
     if r.status_code == 404 or r.status_code == 500:
-        try:
+
             print(Fore.BLUE + "[!]" +  Fore.RED + "Your Target Is Not WordPress" + Fore.YELLOW + " ;( ")
             time.sleep(2)
             sys.exit()
-        except:
-            pass
+
     else:
         print(Fore.BLUE + "[!]" + Fore.GREEN + "Ok Your Target Is WordPress" + Fore.YELLOW + " ;) ")
         time.sleep(3)
         print(Fore.BLUE + "[!]" + Fore.GREEN + "There Test The Plugins ... ")
         time.sleep(3)
     for i in my_list:
-        try:
+
             q = requests.get("http://" + target + "/wp-content/plugins/" + i)
-            if q.status_code == 200 or q.status_code == 400:
+            if q.status_code == 200 :
                 print(Fore.BLUE + "[+] " + Fore.GREEN + q + Fore.RED + " | " + Fore.YELLOW + "Found" )
             else:
                 print(Fore.BLUE + "[-] " + Fore.RED + q + Fore.GREEN + " | " + Fore.YELLOW + "Not Found")
-        except:
-            pass
-    try:
-                time.sleep(2)
-                print(Fore.YELLOW + "\nGod Lounch " + Fore.BLUE + ";)")
-                time.sleep(2)
-                sys.exit()
-    except:
-                pass
+
 __1__()
         
 
