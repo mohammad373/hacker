@@ -4,8 +4,10 @@ import sys
 import requests
 import json
 import os
+from colorama import Fore
 
 def __1__():
+    os.system("clear")
     pl = ("""wordpress-importer
 regenerate-thumbnails
 wp-super-cache
@@ -1032,6 +1034,8 @@ aweber-web-form-widget
                 print(Fore.RED + "[!] " + Fore.RED + q)
         except:
                 pass      
+                      
+__1__()                      
         
 
         
